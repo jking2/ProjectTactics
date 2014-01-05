@@ -5,9 +5,9 @@ Uses LWJGL 2.9.0
 
 Requires the following Libraries:
 
-jinput
-lwjgl_util
-lwjgl
-PNGDecoder
-slick-util
-slick
+1. jinput
+2. lwjgl_util
+3. lwjgl
+4. PNGDecoder
+5. slick-util
+6. slick
