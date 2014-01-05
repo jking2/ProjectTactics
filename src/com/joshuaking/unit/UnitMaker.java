@@ -18,7 +18,7 @@ public class UnitMaker {
 		unit.className = "Test Unit";
 		
 		unit.spriteMap = new SpriteMap();
-		unit.getSpriteMap().addSprite("normal", new Sprite("Assets/Test/TestUnit.png"));
+		unit.getSpriteMap().addSprite("normal", new Sprite("Assets/Units/Classes/Executioner/Front_Left.png"));
 		unit.getSpriteMap().setCurrentSprite("normal");
 		
 		unit.level        = 10;
