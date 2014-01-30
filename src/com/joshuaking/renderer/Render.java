@@ -10,8 +10,8 @@ public class Render {
 	private final float ZOOM_SPEED = 0.1f;
 	private double xCenter = 0;
 	private double yCenter = 0;
-	private final int WIDTH = 800;
-	private final int HEIGHT = 600;
+	private final int WIDTH = 1200; //Default 800
+	private final int HEIGHT = 800; //Default 600
 	private TextureLoader textureLoader;
 	private static Render instance = null;
 	private Render(){

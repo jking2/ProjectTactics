@@ -15,7 +15,7 @@ import org.newdawn.slick.UnicodeFont;
 
 import com.joshuaking.effect.TileEffect;
 import com.joshuaking.renderer.Sprite;
-import com.joshuaking.unit.Thing;
+import com.joshuaking.unit.Entity;
 import com.joshuaking.unit.Unit;
 
 /**
@@ -30,7 +30,7 @@ public class BattleTile {
 	private int yPos;
 	private int xRender;
 	private int yRender;
-	private Thing thing;
+	private Entity thing;
 	private boolean isBlocked;
 	private boolean exist;
 	private int distanceFromStart;
@@ -93,11 +93,11 @@ public class BattleTile {
 		thing = null;
 		isBlocked = false;
 	}
-	public void setThing(Thing thing){
+	public void setThing(Entity thing){
 		this.thing=thing;
 		isBlocked = true;
 	}
-	public Thing getThing(){
+	public Entity getThing(){
 		return thing;
 	}
 	public boolean isBlocked(){

@@ -22,5 +22,8 @@ public interface IEvent {
 	 */
 	public void render();
 	
+	/** 
+	 * fallBack is called when entering this event from an event that was higher up the stack
+	 */
 	public void fallBack();
 }

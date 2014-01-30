@@ -30,7 +30,7 @@ import com.joshuaking.weapon.Weapon;
  * @author Josh
  *
  */
-public class Unit extends Thing {
+public class Unit extends Entity {
 	//***************************************************************************************************************
 	//Cooldowns on actions.If a CD is at 0, they may use that action. At the end of the combatants turn all their CD's
 	//are reduced by 1. This is for things like silences. A 3 turn silence will increase your spellCD to 3.

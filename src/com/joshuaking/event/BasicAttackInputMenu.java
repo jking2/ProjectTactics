@@ -16,8 +16,8 @@ public class BasicAttackInputMenu implements IEvent{
 	private Battle battle;
 	private Unit unit;
 	private Sprite moveIndicator;
-	private ArrayList<BattleTile> tiles;
-	private int cooldown;
+	private ArrayList<BattleTile> tiles; //Tiles this unit can attack
+	private int cooldown; //Prevents the user from clicking too fast
 	public BasicAttackInputMenu(Battle battle, Unit unit){
 		this.battle = battle;
 		this.unit=unit;
@@ -33,8 +33,9 @@ public class BasicAttackInputMenu implements IEvent{
 	@Override
 	public void update() {
 		battle.getCameraControls();
+		//If right click, leave this menu
 		if(Mouse.isButtonDown(1)){
-			battle.popEvent();
+			this.exit();
 		}
 		if(cooldown <=0){
 			getMouseClick();
@@ -59,6 +60,9 @@ public class BasicAttackInputMenu implements IEvent{
 			isWithinTile(Mouse.getX(),Mouse.getY());
 		}
 	}
+	//Check if the selected tile is a tile the unit can attack.
+	//TODO
+	//MAKE SURE THE TILE CONTAINS AN ATTACKABLE ENTITY
 	private void isWithinTile(int x, int y){
 		Vector3f pos = LocationUtil.getMousePositionIn3dCoords(x, y);
 		for(int n = 0; n<tiles.size();n++){
